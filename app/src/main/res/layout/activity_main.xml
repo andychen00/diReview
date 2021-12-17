@@ -13,7 +13,7 @@
         >
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/views"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="#FF4D2A"
@@ -31,7 +31,7 @@
             android:drawableStart="@drawable/search"
             android:text="asdfa"
             android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintBottom_toBottomOf="@id/views"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
