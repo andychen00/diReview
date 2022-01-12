@@ -23,6 +23,7 @@ public class DetailAct extends AppCompatActivity {
 
         init();
 
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back);
 
