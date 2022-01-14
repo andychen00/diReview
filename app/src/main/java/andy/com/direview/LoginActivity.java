@@ -11,37 +11,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-
-//    private static final String[] DUMMY_ACCOUNT = new String[]{
-//            "foo@example.com:hello", "bar@example.com:world"
-//    };
-
+//    default sign in credential:
+//    email: kelompok3@binus.ac.id
+//    password: password
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
 
         EditText userEmail = (EditText) findViewById(R.id.tfEmail);
-        EditText  userPassword = (EditText) findViewById(R.id.tfPassword);
+        EditText userPassword = (EditText) findViewById(R.id.tfPassword);
         Button clickLogin = (Button) findViewById(R.id.btnLogin);
 
-        clickLogin.setOnClickListener(new OnClickListener() {
+        clickLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
                 String UserName = userEmail.getText().toString();
                 String Pwd = userPassword.getText().toString();
                 if(UserName.equalsIgnoreCase("kelompok3@binus.ac.id") && Pwd.equals("password")){
-                    Intent MainIntent = new Intent(LoginActivity.this, CategoryActivity.class);
+                    Intent MainIntent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(MainIntent);
-                    Toast.makeText(LoginActivity.this,"You are Signed in.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"You are Signed in. Welcome!", Toast.LENGTH_LONG).show();
                 }else
                 {
                     Toast.makeText(LoginActivity.this,"Email or Password is incorrect.", Toast.LENGTH_LONG).show();
                 }
+
             }
-
         });
-
     }
 
 }

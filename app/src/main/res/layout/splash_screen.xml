@@ -14,4 +14,6 @@
         android:layout_marginTop="130dp"
         app:srcCompat="@drawable/app_logo"
         android:gravity="center"/>
+
+
 </LinearLayout>
