@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    >
+    android:background="@color/orange">
 
     <ImageView
-        android:layout_width="250dp"
+        android:id="@+id/ivSplash"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginLeft="80dp"
         android:layout_marginTop="130dp"
-        android:srcCompat="@drawable/app_logo" />
+        app:srcCompat="@drawable/app_logo"
+        android:gravity="center"/>
 </LinearLayout>
