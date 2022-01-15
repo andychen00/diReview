@@ -11,4 +11,9 @@
         <item>Television</item>
         <item>Camera</item>
     </string-array>
+    <string name="welcome_back_dhika">Welcome Back, Dhika</string>
+    <string name="welome_back">Welome Back,</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="dhika">Dhika</string>
+    <string name="cari_barang_direview">Cari barang direview</string>
 </resources>
