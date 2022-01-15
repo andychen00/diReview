@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="#FAF7F7"
+    android:orientation="vertical"
+    tools:context=".Search">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <View
             android:id="@+id/views"
@@ -19,7 +19,7 @@
             android:background="#FF4D2A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/search"
@@ -27,9 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:background="@drawable/text_round"
-            android:padding="5dp"
             android:drawableStart="@drawable/search"
-            android:text="asdfa"
+            android:hint="search"
+            android:padding="5dp"
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="@id/views"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,9 +39,28 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange"
+            app:itemIconSize="35dp"
+            app:itemIconTint="@drawable/selected"
+            app:itemTextColor="@drawable/selected"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/navbar" />
+    </RelativeLayout>
+
 
 </LinearLayout>
