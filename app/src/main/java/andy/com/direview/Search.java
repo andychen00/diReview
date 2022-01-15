@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,7 +18,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class Search extends AppCompatActivity {
+public class Search extends Activity {
 
     EditText search;
     RecyclerView rv_product;
@@ -58,7 +59,7 @@ public class Search extends AppCompatActivity {
         productList.add(product);
         productList.add(product);
         productList.add(product);
-        Product product1 = new Product(123, "Samsumg Galaxy Tab S2", 20000000, 6, 4.5);
+        Product product1 = new Product(123, "Samsung Galaxy Tab S2", 20000000, 6, 4.5);
         productList.add(product1);
 
         searchAdapter.setArrayListdata(productList);
@@ -80,21 +81,22 @@ public class Search extends AppCompatActivity {
 
     void navbar() {
         BottomNavigationView navbar = findViewById(R.id.navbar);
-//        navbar.setSelectedItemId(R.id.menu_home);
+        navbar.setSelectedItemId(R.id.menu_search);
+
         navbar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.menu_home) {
 //                    finish();
                     return true;
-                } else if (item.getItemId() == R.id.menu_cart) {
-//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                    startActivity(intent);
-//                    finish();
-                    return true;
-                } else {
+                } else if (item.getItemId() == R.id.menu_category) {
+                    Intent intent = new Intent(Search.this, CategoryActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else if (item.getItemId() == R.id.menu_search) {
                     return true;
                 }
+                return false;
             }
         });
     }

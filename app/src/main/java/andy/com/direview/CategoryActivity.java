@@ -1,5 +1,6 @@
 package andy.com.direview;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,6 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
@@ -17,6 +24,7 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
     ArrayList<Category> categories;
     ArrayList<String> colors;
     CategoryAdapter adapter;
+    Button create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +32,12 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
         setContentView(R.layout.activity_category);
         initializeToolbar();
         initializeCategories();
+        navbar();
     }
 
     private void initializeCategories() {
         listCategory = findViewById(R.id.rvCategories);
+        create = (Button) findViewById(R.id.create);
         dummyColors();
         dummyCategories();
 
@@ -60,9 +70,10 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
     }
 
     private void initializeToolbar() {
-        toolbar = findViewById(R.id.categoryToolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        toolbar = findViewById(R.id.categoryToolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Category");
     }
 
     @Override
@@ -76,6 +87,34 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
 //        Change Activity Destination Here              vvv
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("category", categories.get(position).getTitle());
+        startActivity(intent);
+    }
+
+    void navbar() {
+        BottomNavigationView navbar = findViewById(R.id.navbar);
+        navbar.setSelectedItemId(R.id.menu_category);
+
+        navbar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+//                    finish();
+                    return true;
+                } else if (item.getItemId() == R.id.menu_category) {
+                    return true;
+
+                } else if (item.getItemId() == R.id.menu_search) {
+                    Intent intent = new Intent(CategoryActivity.this, Search.class);
+                    startActivity(intent);
+                    finish();
+                }
+                return false;
+            }
+        });
+    }
+
+    public void create(View view) {
+        Intent intent = new Intent(CategoryActivity.this, Create.class);
         startActivity(intent);
     }
 }

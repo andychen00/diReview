@@ -8,9 +8,15 @@
         />
 
     <item
-        android:id="@+id/menu_cart"
-        android:icon="@drawable/account"
-        android:title="Cart"
+        android:id="@+id/menu_search"
+        android:icon="@drawable/search"
+        android:title="Search"
+        />
+
+    <item
+        android:id="@+id/menu_category"
+        android:icon="@drawable/category"
+        android:title="Category"
         />
 
 

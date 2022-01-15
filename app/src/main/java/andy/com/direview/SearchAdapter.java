@@ -1,6 +1,7 @@
 package andy.com.direview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,14 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         holder.P_Price.setText("IDR " + String.valueOf(productList.get(position).getProductPrice()));
         holder.review.setText(String.valueOf(productList.get(position).getReview()) + " review");
         holder.rating.setText(String.valueOf(productList.get(position).getRating()));
+        holder.cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailAct.class);
+                context.startActivity(intent);
+            }
+        });
+
 
     }
 

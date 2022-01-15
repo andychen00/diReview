@@ -41,8 +41,6 @@ public class Create extends AppCompatActivity {
 
         Spinner dropdown = findViewById(R.id.spinner1);
 
-
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.dropdownlist,R.layout.dropdownlayout);
         adapter.setDropDownViewResource(R.layout.dropdownadapter);
         dropdown.setAdapter(adapter);
@@ -61,12 +59,6 @@ public class Create extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
 
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override

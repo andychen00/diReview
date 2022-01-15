@@ -29,7 +29,9 @@
             android:background="@drawable/text_round"
             android:padding="5dp"
             android:drawableStart="@drawable/search"
-            android:text="asdfa"
+            android:hint="search here"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/black"
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="@id/views"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,5 +45,12 @@
         android:id="@+id/rv_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add btn"
+        ></Button>
 
 </LinearLayout>

@@ -2,9 +2,13 @@
     <string name="app_name">diReview</string>
     <string name="categories">Categories</string>
     <string-array name="dropdownlist">
-        <item>cat1</item>
-        <item>cat2</item>
-        <item>cat3</item>
-
+        <item>Handphone Accessories</item>
+        <item>Headphone</item>
+        <item>Handphone</item>
+        <item>Laptop</item>
+        <item>Shirt</item>
+        <item>Pants</item>
+        <item>Television</item>
+        <item>Camera</item>
     </string-array>
 </resources>
