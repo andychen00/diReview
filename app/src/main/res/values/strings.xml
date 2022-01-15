@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">diReview</string>
     <string name="categories">Categories</string>
+    <string-array name="dropdownlist">
+        <item>cat1</item>
+        <item>cat2</item>
+        <item>cat3</item>
+
+    </string-array>
 </resources>

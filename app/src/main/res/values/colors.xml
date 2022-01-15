@@ -10,4 +10,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF4D2A</color>
     <color name="orange_700">#D8250A</color>
+    <color name="orangetheme">#FF4D2A</color>
 </resources>
