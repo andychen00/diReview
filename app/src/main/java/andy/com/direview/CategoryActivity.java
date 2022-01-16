@@ -98,11 +98,11 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.menu_home) {
-//                    finish();
-                    return true;
+                    Intent intent = new Intent(CategoryActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 } else if (item.getItemId() == R.id.menu_category) {
                     return true;
-
                 } else if (item.getItemId() == R.id.menu_search) {
                     Intent intent = new Intent(CategoryActivity.this, Search.class);
                     startActivity(intent);

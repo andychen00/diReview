@@ -87,8 +87,9 @@ public class Search extends Activity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.menu_home) {
-//                    finish();
-                    return true;
+                    Intent intent = new Intent(Search.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 } else if (item.getItemId() == R.id.menu_category) {
                     Intent intent = new Intent(Search.this, CategoryActivity.class);
                     startActivity(intent);

@@ -12,6 +12,7 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".CategoryActivity"/>
         <activity android:name=".Search"/>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Create" android:parentActivityName=".CategoryActivity"/>
         <activity android:name=".Create_Review" android:parentActivityName=".DetailAct" />
 

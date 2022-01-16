@@ -26,7 +26,7 @@ public class DetailAct extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back);
 
-        mImageView.setImageResource(R.drawable.android_nums);
+        mImageView.setImageResource(R.drawable.phone);
     }
 
     public void init(){
