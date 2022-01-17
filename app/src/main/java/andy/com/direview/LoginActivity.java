@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
                 String UserName = userEmail.getText().toString();
                 String Pwd = userPassword.getText().toString();
                 if(UserName.equalsIgnoreCase("kelompok3@binus.ac.id") && Pwd.equals("password")){
-                    Intent MainIntent = new Intent(LoginActivity.this, CategoryActivity.class);
+                    Intent MainIntent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(MainIntent);
                     Toast.makeText(LoginActivity.this,"You are Signed in. Welcome!", Toast.LENGTH_LONG).show();
                 }else
